@@ -15,7 +15,7 @@ app.post('/webhook', (req, res) => {
   webhookData.push(payload);
 
   console.log('Received webhook payload:', payload);
-  res.status(200).json({ message: 'Webhook received successfully' });
+  res.status(200).json({ message: 'Webhook received successfully', data: payload });
 });
 
 app.get('/webhook', (req, res) => {
